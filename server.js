@@ -28,7 +28,7 @@ fastify.get("/", function (request, reply) {
   console.log("Received HTTP GET request");
 
   // Отправка ответа с сообщением "HELLO"
-  reply.send({ message: "HELLO" });
+  reply.send('HELLO');
 });
 
 fastify.listen(
