@@ -30,9 +30,10 @@ fastify.get("/", function (request, reply) {
   // Отправка ответа с сообщением "HELLO"
   reply.send('HELLO');
 });
-/*
+const PORT = process.env.PORT || 3000;
+
 fastify.listen(
-  { port: process.env.PORT, host: "0.0.0.0" },
+  { port: PORT, host: "0.0.0.0" },
   function (err, address) {
     if (err) {
       console.error(err);
@@ -41,10 +42,6 @@ fastify.listen(
     console.log(`Your app is listening on ${address}`);
   }
 );
-*/
-// Запускаем сервер на порту 3000
-const PORT = process.env.PORT || 3000;
 
-server.listen(PORT, () => {
-  console.log(`Server is listening on port ${PORT}`);
-});
+
+
